@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Contactanos
+        </h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="https://formsubmit.co/circe.dellop@gmail.com" method="post"><!--El valor del atributo action es la url a donde se manda la información del formulario. En el atributo method, se indica el tipo de método de http que se utilizara-->
+                <fieldset><!--Permite agrupar por campos-->
+                    <legend>
+                        Datos básicos de contacto
+                    </legend>
+
+                    <!--La asociación semantica con la etiqueta label, puede hacerse con las etiquetas por separado o anidadas-->
+                    <label for="nombre"><!--Etiquetas separdas-->
+                        Nombres:
+                    </label>
+                    <input id="nombre" placeholder="Pancracio" name="nombreUsuario"><!--Placeholder es una guía que se muestra en como ejemplo-->
+                    
+                    <br>
+                    <label for="apellidos"><!--Etiquetas anidadas-->
+                        Apellidos:
+                        <input id="apellidos" placeholder="García" name="apellidosUsuario">
+                    </label>
+                    
+                    <br>
+                    <label for="correoE">
+                        Correo electronico:
+                        <input id="correoE" placeholder="pancracio@gmail.com" required name="correo"><!--Required indica que es un campo obligatorio-->
+                    </label>
+                    <br>
+                    Teléfono: <input type="tel" placeholder="5555555555" name="numeroTelefonico">
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        Otros datos
+                    </legend>
+                    <span>
+                        El mínimo para ingresar es 20 y el máximo 300
+                    </span>
+                    <br>
+                    Número: <input type="number" min="20" max="300" name="cantidadTamales" required><!--min indica minimo que se puede ingresar y mas el maximo que se puede ingresar-->
+                    <br>
+                    Fecha: <input type="date" name="fecha" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        Datos del envío
+                    </legend>
+                    <!--Se agrupan usando el atributo nombre para que solo permita seleccionar una opción-->
+                    <label for="recogerSucursal"><!--El valor del atributo label debe ser igual al atributo id del input correspondiente-->
+                        <input id="recogerSucursal" type="radio" name="tipoEnvio">Recoger en sucursal 
+                    </label>
+                    
+                    <label for="envioDomicilio">
+                        <input id="envioDomicilio" type="radio" name="tipoEnvio">Envío a domicilio
+                    </label>
+
+                    <label for="delivery">
+                        <input id="delivery" type="radio" name="tipoEnvio">Delivery
+                    </label>
+
+                    <br>
+                    <select name="" id=""><!--Con el "select" el usuario debe hacer scroll infinito hasta encontrar la opción deseada-->
+                        <option value="sucursalCoyoacan">Sucursal Coyoacan</option>
+                        <option value="sucursalSanMartin">Sucursal San Martín de las Flores</option>
+                        <option value="sucursalXochimilco">Sucursal Xochimilco</option>
+                        <option value="sucursalSatelite">Sucursal Satélite</option>
+                        <option value="sucursalEcatepec">Sucursal Ecatepec</option>
+                        <option value="sucursalGuadalajara">Sucursal Guadalajara</option>
+                        <option value="sucursalWaverlyPlace">Sucursal Waverly Place</option>
+                        <option value="sucursalMazatlan">Sucursal Mazatlán</option>
+                    </select>
+                    
+                    <br>
+                    Ingrese la sucursal: <input list="sucursales" name="sucursal">
+                    <datalist id="sucursales"><!--Está forma le da la ipción al usuario para escoger a partir de las primeras letras de lo que busca-->
+                            <option value="sucursalCoyoacan">Sucursal Coyoacán</option>
+                            <option value="sucursalSanMartin">Sucursal San Martín de las Flores</option>
+                            <option value="sucursalXochimilco">Sucursal Xochimilco</option>
+                            <option value="sucursalSatelite">Sucursal Satélite</option>
+                            <option value="sucursalEcatepec">Sucursal Ecatepec</option>
+                            <option value="sucursalGuadalajara">Sucursal Guadalajara</option>
+                            <option value="sucursalWaverlyPlace">Sucursal Waverly Place</option>
+                            <option value="sucursalMazatlan">Sucursal Mazatlán</option>
+                    </datalist>
+
+                    <!--Casilla de verificación-->
+                    <input name="terminosCondiciones" type="checkbox" requered>Acepto los términos y condiciones
+                    
+                    <br>
+                    <!--<input type="submit"><!-Boton usando input-->
+                    <button type="submit">Ámonos recio</button>
+                    </select>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
