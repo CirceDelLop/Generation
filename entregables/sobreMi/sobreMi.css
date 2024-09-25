@@ -1,0 +1,32 @@
+*
+{    
+    background: rgb(6,6,6);
+    background: radial-gradient(circle, rgba(6,6,6,1) 32%, rgba(253,29,29,1) 100%);
+}
+
+h1
+{
+    color: white;
+}
+
+.card-img-top
+{
+    width: 25%;
+}
+
+a, ul, ol, h2,p
+{
+    background-color: none;
+    color: white;
+}
+
+.carousel-inner img
+{
+    width: 10%;
+    align-items: center;
+}
+
+.botones
+{
+    color: blue;
+}
