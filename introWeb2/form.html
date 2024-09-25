@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactanos</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="shortcut icon" href="edicion.png" type="image/x-icon">
+
 </head>
 <body>
     <header>
-        <h1>
-            Contactanos
-        </h1>
+        <nav>
+            <ul>
+                <li class="elementosNavegacion"> 
+                    <a href="index.html"> Inicio </a> 
+                </li>
+                <li class="elementosNavegacion"> 
+                    <a href="https://www.unam.mx/#" target="_blank"> Nosotros </a>
+                </li>
+                <li class="elementosNavegacion"> 
+                    <a href=""> Productos destacados </a>
+                </li>
+                <li class="elementosNavegacion">
+                    <a href=""> Contacto </a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section>
+            <h1>
+                Contactanos
+            </h1>
+    
             <form action="https://formsubmit.co/circe.dellop@gmail.com" method="post"><!--El valor del atributo action es la url a donde se manda la información del formulario. En el atributo method, se indica el tipo de método de http que se utilizara-->
-                <fieldset><!--Permite agrupar por campos-->
+                <fieldset id="datosBasicos"><!--Permite agrupar por campos-->
                     <legend>
                         Datos básicos de contacto
                     </legend>
@@ -23,25 +43,25 @@
                     <!--La asociación semantica con la etiqueta label, puede hacerse con las etiquetas por separado o anidadas-->
                     <label for="nombre"><!--Etiquetas separdas-->
                         Nombres:
+                        <input id="nombre" placeholder="Pancracio" name="nombreUsuario" type="text"><!--Placeholder es una guía que se muestra en como ejemplo-->
                     </label>
-                    <input id="nombre" placeholder="Pancracio" name="nombreUsuario"><!--Placeholder es una guía que se muestra en como ejemplo-->
                     
-                    <br>
                     <label for="apellidos"><!--Etiquetas anidadas-->
                         Apellidos:
-                        <input id="apellidos" placeholder="García" name="apellidosUsuario">
+                        <input id="apellidos" placeholder="García" name="apellidosUsuario" type="text">
                     </label>
                     
-                    <br>
                     <label for="correoE">
                         Correo electronico:
-                        <input id="correoE" placeholder="pancracio@gmail.com" required name="correo"><!--Required indica que es un campo obligatorio-->
+                        <input id="correoE" placeholder="pancracio@gmail.com" required name="correo" type="email"><!--Required indica que es un campo obligatorio-->
                     </label>
-                    <br>
-                    Teléfono: <input type="tel" placeholder="5555555555" name="numeroTelefonico">
+
+                    <label for="">
+                        Teléfono: <input type="tel" placeholder="5555555555" name="numeroTelefonico">
+                    </label>
                 </fieldset>
 
-                <fieldset>
+                <fieldset id="datosPedido">
                     <legend>
                         Otros datos
                     </legend>
@@ -54,7 +74,7 @@
                     Fecha: <input type="date" name="fecha" required>
                 </fieldset>
 
-                <fieldset>
+                <fieldset id="datosEnvio">
                     <legend>
                         Datos del envío
                     </legend>
@@ -98,12 +118,12 @@
 
                     <!--Casilla de verificación-->
                     <input name="terminosCondiciones" type="checkbox" requered>Acepto los términos y condiciones
-                    
-                    <br>
-                    <!--<input type="submit"><!-Boton usando input-->
-                    <button type="submit">Ámonos recio</button>
                     </select>
                 </fieldset>
+                
+                <br>
+                    <!--<input type="submit"><!-Boton usando input-->
+                    <button type="submit">Ámonos recio</button>
             </form>
         </section>
     </main>

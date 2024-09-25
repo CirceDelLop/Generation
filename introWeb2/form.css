@@ -1,0 +1,125 @@
+*/*Resetea los estilos que vienen por default en el navegador*/
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root/*Declaración de variables para reutilizar los colores*/
+{
+    --color_texto:#5a4880;
+    --color_elementos_fieldset:#4d3e6b;
+    --color_boton: #f07360;
+    --color_hover:#ed7866;
+    --color_border_fielset: rgb(168, 230, 117);
+    /* Podemos declarar variables para las fuentes y para unidades de medida también */
+    /*--fuentePrincipal: "Lora", serif; */
+    /*--fuenteSecundaria: "Ubuntu", sans-serif; */
+    /*--pane-padding: 5px 42px; */
+}
+
+header
+{
+    display: flex;/*Vizualicación en un contenedor sea flexible*/
+    justify-content: space-between;/*Distribuy uniformemente los elementos a lo largo del contenedor*/
+    padding: 10px;
+}
+
+nav>ul/*Selecciona el elemento nav apuntando directamnte a un elemento ul: ul es hija directa de nav*/
+{
+    list-style-type: none;/*Se eliminan los marcadores de la lista, bullet points*/
+    display: flex;
+}
+
+.elementosNavegacion /*Elementos de la barra de navegación*/
+{
+    margin: 20px 50px;/*TRouBLe, en sentido a las manecillas del reloj. Pero cuando hay dos valores, el primero es para top y bottom, y el segundo para right y left*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;/*em es unidad relativa. Las unidades relativas, se sugieren para el tamaño de fuentes*/
+    /*font-weight: 500;/*Peso de la fuente*/
+}
+
+.elementosNavegacion a /*Enlaces de los elementos de la barra de navegación*/
+{
+    text-decoration: none;/*Elimina el subrayado de la etiquea a*/
+    color: var(--color_texto); /*var llamada la variable indicada dentro de los parentesis*/
+}
+
+.elementosNavegacion a:hover/*Uso de pseudoclase en los enlaces de la navegación*/
+{
+    color:var(--color_hover);
+    text-decoration: underline overline;
+}
+
+h1
+{
+    color: var(--color_texto);
+    text-align: center;
+}
+
+form
+{
+    width: 70%;/*Ocupa el 70% del contenedor principal*/
+    max-width: 800px;/*Ancho máximo*/font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0 auto;
+}
+
+fieldset
+{
+    border-color: var(--color_border_fielset);
+    border-radius: 1.2em;
+    color:var(--color_elementos_fieldset);
+    margin: 20px;
+}
+
+legend
+{
+    text-align: left;
+}
+
+legend::first-letter /*Pseudoelemento*/
+{
+    color: var(--color_boton);
+}
+
+#datosPedido,#datosEnvio
+{
+    padding: 30px 50px;
+}
+
+#datosBasicos label
+{
+    display: block;/*Hace que las eqtiquetas se muestran como elementos de bloque, así no se utiliza br en HTML*/
+}
+
+#datosBasicos input,#datosPedido input,#datosEnvio input
+{
+    border: 3px solid var(--color_elementos_fieldset);
+    width: 200px;
+    height: 20px;
+}
+
+/*Estilos a campos de entrada (inputs) cuando estén en foco*/
+input[type="text"]:focus/*Indica que se selecionarán los inputs con el atributo type="text" y se añade una pseudoClase*/
+{
+    box-shadow: 10px 7px var(--color_elementos_fieldset);
+}
+
+#datosEnvio select[name="sucursales"]
+{
+    width: 200px;
+    border: 3px solid var(--color_elementos_fieldset);
+}
+
+button[type="submit"]
+{
+    color: var(--color_boton);
+    background-color: var(--color_elementos_fieldset);
+    float: right;
+}
+
+button :active
+{
+    transform:scale(0.90em);
+}
