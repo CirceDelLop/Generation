@@ -79,6 +79,14 @@ console.log(isLeapYear(2024));
 console.log(isLeapYear(2023));
 console.log(isLeapYear(2020));
 
+//Ejercicios para aplicar la presedencia de los operadores:
+console.log("Precedencia de operadores");
+console.log(3*2/2);//3*2=6/2=3
+console.log(3/2*2);//3/2=1.5*2=3
+console.log(2*4/2**3);//2*4=8/2**3=8/8=1
+console.log(3**2**3);//2**3=8=>3**8=6561
+console.log(20/4+3*(2+3)-4**2);//20/4+3*(5)-4**2=5+15-16=4
+
 //Uso de rest parameters "(...nomVariable)". Siempre debe ir al final de todos los parametros
 /* const verificarUltimoDigitoDeVariosNumeros=(nombre,...numeros)=>
 {
