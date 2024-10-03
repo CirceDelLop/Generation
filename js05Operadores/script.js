@@ -129,3 +129,34 @@ const amount=parseFloat(money)+500;
 const amount=Number(money)+500;*/
 const amount=+money+500;//El string money lo convierte a númerico
 console.log(amount);
+
+// Diferencias entre usar Number() y parseInt()
+// - Number convierte enteros y decimales
+// - parseInt convierte solo la parte entera
+console.log( parseInt("10.456")); // 10
+// - Number devuelve NaN si la cadena contiene algún caracter no numérico
+// - parseInt convierte los enteros hasta encontrar una caracter no numérico
+//       Si la entrada no comienza con un valor numérico, devuelve NaN
+console.log( parseInt("10-25") ); // 10
+console.log( Number("10-25") ); // NaN
+
+console.log( Number( true ) ); // 1
+console.log( Number( false ) ); // 0
+console.log( parseInt( true ) ); // NaN
+
+//Conversión a booleano
+// En la conversión de boolean los siguientes valores son false: "", 0, null, undefined
+console.log( Boolean(1) ); //true
+console.log( Boolean(1000) ); //true
+console.log( Boolean(-1000) ); //true
+console.log( Boolean("Ya mero nos vamos a comer, me duele la cabeza") ); // true
+console.log( Boolean("") ); // false
+console.log( Boolean(" ") ); // true por que hay un espacio
+
+// Number
+// [] -> 0 , [30] -> 30, [30,33] -> NaN, false -> 0, true -> 1
+console.log(Number([]),Number([30]),Number([30,33]));//Se retorna 0,30,NaN
+
+// String
+// [] -> "" , [12,2] -> "12,2", function(){} -> "funtion(){}", {} -> [object, object]
+console.log(String([],String([12,2])));//Se retorna "","12,2"
