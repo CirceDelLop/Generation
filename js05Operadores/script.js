@@ -160,3 +160,7 @@ console.log(Number([]),Number([30]),Number([30,33]));//Se retorna 0,30,NaN
 // String
 // [] -> "" , [12,2] -> "12,2", function(){} -> "funtion(){}", {} -> [object, object]
 console.log(String([],String([12,2])));//Se retorna "","12,2"
+console.log(String({name:"Sergio",job:"Instructor"}));//Se retorna [object,objetc]
+
+//Forma correcta para convertir un objeto a string
+console.log(JSON.stringify({name:"Sergio",job:"Instructor"}));//Se retorna {"name":"Sergio","job":"Instructor"}
