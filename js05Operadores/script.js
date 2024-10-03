@@ -96,3 +96,36 @@ console.log(20/4+3*(2+3)-4**2);//20/4+3*(5)-4**2=5+15-16=4
 console.log(verificarUltimoDigitoDeVariosNumeros("Circe",2,22));
 console.log(verificarUltimoDigitoDeVariosNumeros("Circe",2,22,52));
 console.log(verificarUltimoDigitoDeVariosNumeros("Circe",2,22,52,44)); */
+
+//Operadores de asignación
+/*Asigna un valor a su operador izquierdo basándose en el valor de su operando derecho:
+signación =
+Operadores abreviados ( compuestos ):
+  op1 += op2  -> op1 = op1 + op2
+  op1 -= op2  -> op1 = op1 - op2
+  op1 *= op2  -> op1 = op1 * op2*/
+
+let age=16;
+//Agregar 4 a la variable age y almacenar el resultado en 'age': age=age+4
+age+=4;//16+4=20
+age*=2/2+3;//20*=1+3=20*4=80
+age-=40/2*3;//80-=20*3=>80-60=20
+
+//Operadores unarios
+//Solo actuan sobre un operando
+//Negación unaria
+let edad=-age;//-20
+let almaEdad=-edad;//20
+
+//Suma unaria
+let dinero=-100;
+let pago=+dinero;
+console.log(dinero,pago);
+
+const money="100.5";
+//Formas de convertir un número en string(expresado con número entre comillas) a numerico
+/*const amount=parseInt(money)+500;
+const amount=parseFloat(money)+500;
+const amount=Number(money)+500;*/
+const amount=+money+500;//El string money lo convierte a númerico
+console.log(amount);
