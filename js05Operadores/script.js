@@ -164,3 +164,20 @@ console.log(String({name:"Sergio",job:"Instructor"}));//Se retorna [object,objet
 
 //Forma correcta para convertir un objeto a string
 console.log(JSON.stringify({name:"Sergio",job:"Instructor"}));//Se retorna {"name":"Sergio","job":"Instructor"}
+
+//Operador de incremento y decremento en unidad
+/*Operador de post-incremento|post-decremento (valor++|valor--): Primero se devuelve el valor y despues se incrementa/decrementa*/
+let x = 10;
+x++; // x = x + 1;
+console.log( x ); // 11
+
+/*Operador de pre-incremento|pre-decremento(++valor|--valor): Primero se incrementa/decrementa y despues de devuelve el valor*/
+let y = 30;
+++y; // y = y + 1;
+console.log( y ); // 31
+
+//Ejemplos de como funciona
+let valorA=10;
+let valorB=10;
+console.log(valorA++);
+console.log(++valorB);
