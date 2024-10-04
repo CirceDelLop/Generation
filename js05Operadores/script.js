@@ -180,3 +180,16 @@ let valorA=10;
 let valorB=10;
 console.log(valorA++);
 console.log(++valorB);
+
+//Ejercicio
+let diaSemana=5;
+console.log("El día de hoy es el n."+ ++diaSemana);
+console.log("Mañana será el n.: "+ diaSemana);
+
+let medidaCereal=30;
+console.log("Me comí un puñito de Cereal, ahora tiene: "+ --medidaCereal);
+console.log("Me volvió a dar hambre y volví a comer, ahora tine: "+ --medidaCereal);
+console.log("Lo revisé después y tiene la medida de: "+ medidaCereal);
+
+let a=0;
+let b=0;
