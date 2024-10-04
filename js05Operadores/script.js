@@ -143,7 +143,6 @@ console.log( Number("10-25") ); // NaN
 console.log( Number( true ) ); // 1
 console.log( Number( false ) ); // 0
 console.log( parseInt( true ) ); // NaN
-
 //Conversión a booleano
 // En la conversión de boolean los siguientes valores son false: "", 0, null, undefined
 console.log( Boolean(1) ); //true
@@ -171,7 +170,7 @@ let x = 10;
 x++; // x = x + 1;
 console.log( x ); // 11
 
-/*Operador de pre-incremento|pre-decremento(++valor|--valor): Primero se incrementa/decrementa y despues de devuelve el valor*/
+/*Operador de pre-incremento|pre-decremento(++valor|--valor): Primero se incrementa/decrementa y despues se devuelve el valor*/
 let y = 30;
 ++y; // y = y + 1;
 console.log( y ); // 31
