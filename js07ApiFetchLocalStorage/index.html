@@ -17,6 +17,7 @@
         <section class="container">
             <div class="row justify-content-center">
                 <!--Descripción de la sesión-->
+                <!--Local Storage-->
                 <div class="col-12 col-md-8 text-light">
                     <h2 id="subtitle">
                       Sesión Local Storage
@@ -33,6 +34,19 @@
                         <li><code>localStorage.getItem('clave')</code>: Recupera un valor.</li>
                         <li><code>localStorage.removeItem('clave')</code>: Elimina un ítem específico.</li>
                         <li><code>localStorage.clear()</code>: Elimina todos los ítems guardados.</li>
+                    </ul>
+                </div>
+
+                <!--API Fetch-->
+                <div class="col-12 col-md-8 text-light">
+                  <h2 id="subtitle">Api Fetch</h2>
+                    <p>La API fetch es una herramienta de JavaScript para realizar solicitudes HTTP asíncronas, que permite obtener datos de servidores o enviar información sin recargar la página.
+                    </p>
+
+                    <h3>Ventajas de fetch:</h3>
+                    <ul>
+                        <li>Promesas: Más fácil de manejar que XMLHttpRequest.</li>
+                        <li>Utiliza APIs más recientes y promueve el código limpio y legible.</li>
                     </ul>
                 </div>
                 <!--Imagen de decoración-->
@@ -64,5 +78,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="apiFetch.js"></script>
   </body>
 </html>
