@@ -12,8 +12,35 @@ La API Fetch nos ayuda a acceder y manipular peticiones HTTP ( GET, POST, PUT, D
  Sintaxis:
     fetch(resource, options)*/
 
+const datosDelProducto=()=>
+{
+    const url="./assets/json/legoChef.json";
 
+    const callbackParaThen=(valorDeResolved)=>
+    {
+        console.log(valorDeResolved);
+        valorDeResolved.json()//Devuelve una promesa de json a object
+            .then(producto=>console.log(producto))
+            .catch(error=>console.log(error))
+    }
 
+    const callbackParaError=(valorDeRejected)=>
+    {
+        console.log(valorDeRejected);
+    }
+
+    const callbackParaFinally=()=>
+    {
+        console.log("He terminado de manejar la api Fetch");
+    }
+    //fetch(url).then().catch().finally();//finally es opcional ponerlo
+    fetch(url)
+        .then(callbackParaThen)
+        .catch(callbackParaError)
+        .finally(callbackParaFinally);
+}
+
+datosDelProducto();
 /*JSON (JavaScript Object Notation) es un formato de texto ligero para el intercambio de datos. Algunas de sus características incluyen:
 -Es un formato de texto plano y fácil de leer.
 -Utiliza una estructura de pares clave-valor para representar datos.

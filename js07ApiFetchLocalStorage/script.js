@@ -33,7 +33,7 @@ sintaxis:
 const cambiarImagen=(newImage,altInfo)=>
 {
   image=document.getElementById("logo");
-  image.src=`./${newImage}`;
+  image.src=`./assets/img/${newImage}`;
   image.alt=altInfo;
 }
 
