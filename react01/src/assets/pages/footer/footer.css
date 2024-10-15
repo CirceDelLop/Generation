@@ -1,0 +1,23 @@
+.footer{
+    background-color: #6b0202;
+    padding: 10px;
+    display: flex;
+    align-items:end;
+}
+
+.nombre{
+    color:#fff;
+}
+
+.links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-decoration: none;
+}
+
+.link{
+    color:aqua;
+    text-decoration: none;
+}
